@@ -1,0 +1,17 @@
+{
+  "name": "@mugi111/view-ir",
+  "version": "0.1.0",
+  "description": "Compact, appendable UI observation IR for AI agents",
+  "type": "module",
+  "engines": { "node": ">=20" },
+  "exports": {
+    ".": { "types": "./dist/index.d.ts", "import": "./dist/index.js" },
+    "./playwright": { "types": "./dist/playwright.d.ts", "import": "./dist/playwright.js" }
+  },
+  "bin": { "view-ir": "./dist/cli.js" },
+  "files": ["dist", "skills"],
+  "scripts": { "build": "tsc -p tsconfig.json" },
+  "peerDependencies": { "playwright-core": ">=1.40.0" },
+  "peerDependenciesMeta": { "playwright-core": { "optional": true } },
+  "devDependencies": { "@types/node": "^22.0.0", "playwright-core": "^1.58.0", "typescript": "^5.9.0" }
+}
